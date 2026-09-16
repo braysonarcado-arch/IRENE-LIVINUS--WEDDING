@@ -1,1 +1,291 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Irene & Livinus | Wedding</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: #fffaf7;
+      color: #333;
+      text-align: center;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 20px;
+      background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1600&q=80")
+        center/cover no-repeat;
+      color: white;
+    }
+
+    .small-title {
+      font-size: 18px;
+      letter-spacing: 4px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: 58px;
+      font-weight: normal;
+      margin-bottom: 15px;
+    }
+
+    .amp {
+      font-style: italic;
+      font-size: 40px;
+    }
+
+    .date {
+      font-size: 22px;
+      margin: 20px 0 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 28px;
+      border: 1px solid white;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: white;
+      color: #333;
+    }
+
+    section {
+      padding: 70px 20px;
+    }
+
+    .section-title {
+      font-size: 34px;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+
+    .line {
+      width: 70px;
+      height: 2px;
+      background: #b58b62;
+      margin: 0 auto 30px;
+    }
+
+    .intro {
+      max-width: 700px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .details {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      max-width: 1000px;
+      margin: 40px auto 0;
+    }
+
+    .card {
+      width: 280px;
+      padding: 30px 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      font-size: 23px;
+      font-weight: normal;
+    }
+
+    .card p {
+      line-height: 1.7;
+    }
+
+    .story {
+      background: #f5eee8;
+    }
+
+    .countdown {
+      font-size: 30px;
+      margin-top: 25px;
+      letter-spacing: 2px;
+    }
+
+    .rsvp {
+      background: #2f2a27;
+      color: white;
+    }
+
+    .rsvp .line {
+      background: #d5b18c;
+    }
+
+    .rsvp-btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 14px 35px;
+      background: white;
+      color: #2f2a27;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+
+    footer {
+      padding: 25px;
+      background: #211e1c;
+      color: white;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 42px;
+      }
+
+      .small-title {
+        font-size: 14px;
+      }
+
+      .date {
+        font-size: 18px;
+      }
+
+      section {
+        padding: 55px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="small-title">Together with their families</div>
+
+    <h1>
+      Irene <span class="amp">&</span> Livinus
+    </h1>
+
+    <div class="date">
+      We are getting married
+    </div>
+
+    <a href="#details" class="btn">Explore Our Wedding</a>
+  </div>
+
+
+  <!-- WELCOME -->
+  <section>
+    <h2 class="section-title">Welcome</h2>
+    <div class="line"></div>
+
+    <p class="intro">
+      With joyful hearts, we invite you to celebrate the love,
+      friendship and beautiful journey of
+      <strong>Irene & Livinus</strong>.
+      Your presence will make our special day even more memorable.
+    </p>
+  </section>
+
+
+  <!-- DETAILS -->
+  <section id="details" class="story">
+
+    <h2 class="section-title">Wedding Details</h2>
+    <div class="line"></div>
+
+    <div class="details">
+
+      <div class="card">
+        <h3>📅 Date</h3>
+        <p>
+          Wedding Date<br>
+          <strong>Coming Soon</strong>
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>📍 Venue</h3>
+        <p>
+          Wedding Venue<br>
+          <strong>Coming Soon</strong>
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>⏰ Time</h3>
+        <p>
+          Ceremony Time<br>
+          <strong>Coming Soon</strong>
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- COUNTDOWN -->
+  <section>
+
+    <h2 class="section-title">Counting Down To Our Day</h2>
+    <div class="line"></div>
+
+    <div class="countdown" id="countdown">
+      Coming Soon ❤️
+    </div>
+
+  </section>
+
+
+  <!-- RSVP -->
+  <section class="rsvp">
+
+    <h2 class="section-title">We Would Love To See You</h2>
+    <div class="line"></div>
+
+    <p class="intro">
+      Your love, prayers and presence mean so much to us.
+      We look forward to celebrating this beautiful moment with you.
+    </p>
+
+    <a href="#" class="rsvp-btn">
+      RSVP
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    Irene & Livinus ❤️<br>
+    Our Wedding Celebration
+  </footer>
+
+</body>
+  </html>
