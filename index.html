@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Irene Charles & Livinus | Wedding</title>
+<title>Irene Charles & Livinus | Wedding Invitation</title>
 
 <style>
 *{
@@ -18,22 +18,95 @@ html{
 }
 
 body{
-    font-family: "Georgia", serif;
+    font-family:Georgia,serif;
     background:#fffaf7;
     color:#3b2929;
-    line-height:1.6;
+    line-height:1.7;
+    overflow-x:hidden;
 }
 
 section{
-    padding:70px 20px;
+    padding:80px 20px;
 }
 
 .container{
-    max-width:1000px;
+    max-width:1050px;
     margin:auto;
 }
 
-/* HERO */
+h1,h2,h3{
+    font-weight:400;
+}
+
+a{
+    text-decoration:none;
+}
+
+/* =========================
+   OPENING SCREEN
+========================= */
+
+.opening{
+    position:fixed;
+    inset:0;
+    z-index:9999;
+    background:#3b2929;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    transition:opacity 1s ease, visibility 1s ease;
+}
+
+.opening.hide{
+    opacity:0;
+    visibility:hidden;
+}
+
+.opening-content{
+    padding:30px;
+    animation:fadeUp 1.5s ease;
+}
+
+.opening-small{
+    letter-spacing:5px;
+    font-size:12px;
+    text-transform:uppercase;
+    color:#dcb8aa;
+    margin-bottom:25px;
+}
+
+.opening h1{
+    font-size:clamp(45px,11vw,85px);
+    line-height:1;
+    margin-bottom:20px;
+}
+
+.opening-date{
+    letter-spacing:4px;
+    font-size:18px;
+    margin-bottom:35px;
+}
+
+.enter-btn{
+    border:1px solid #dcb8aa;
+    color:white;
+    padding:14px 32px;
+    border-radius:40px;
+    display:inline-block;
+    transition:.3s;
+}
+
+.enter-btn:hover{
+    background:#dcb8aa;
+    color:#3b2929;
+}
+
+/* =========================
+   HERO
+========================= */
+
 .hero{
     min-height:100vh;
     display:flex;
@@ -41,10 +114,12 @@ section{
     justify-content:center;
     text-align:center;
     padding:30px 20px;
+
     background:
-        linear-gradient(rgba(55,30,35,.58),rgba(55,30,35,.65)),
-        url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=85")
-        center/cover;
+    linear-gradient(rgba(55,30,35,.58),rgba(55,30,35,.70)),
+    url("IMG-20260917-WA0064.jpg")
+    center/cover;
+
     color:white;
 }
 
@@ -55,29 +130,27 @@ section{
 .small-title{
     letter-spacing:4px;
     text-transform:uppercase;
-    font-size:14px;
+    font-size:13px;
     margin-bottom:20px;
 }
 
 .hero h1{
-    font-size:clamp(45px,10vw,90px);
-    font-weight:400;
-    line-height:1.05;
+    font-size:clamp(50px,11vw,95px);
+    line-height:1;
     margin-bottom:20px;
 }
 
 .hero .date{
-    font-size:22px;
-    letter-spacing:2px;
+    font-size:21px;
+    letter-spacing:3px;
     margin-bottom:30px;
 }
 
 .hero-btn{
     display:inline-block;
-    padding:13px 28px;
+    padding:14px 30px;
     border:1px solid white;
     color:white;
-    text-decoration:none;
     border-radius:30px;
     transition:.3s;
 }
@@ -87,7 +160,10 @@ section{
     color:#3b2929;
 }
 
-/* TITLES */
+/* =========================
+   SECTION TITLES
+========================= */
+
 .section-title{
     text-align:center;
     margin-bottom:45px;
@@ -95,63 +171,142 @@ section{
 
 .section-title span{
     color:#a87868;
-    font-size:14px;
-    letter-spacing:3px;
+    font-size:13px;
+    letter-spacing:4px;
     text-transform:uppercase;
 }
 
 .section-title h2{
-    font-size:38px;
-    font-weight:400;
+    font-size:40px;
     margin-top:8px;
 }
 
-/* WELCOME */
-.welcome{
+/* =========================
+   INVITATION
+========================= */
+
+.invitation{
     text-align:center;
 }
 
-.welcome-text{
-    max-width:700px;
+.invitation-card{
+    max-width:780px;
     margin:auto;
+    padding:45px 25px;
+    background:white;
+    border-radius:25px;
+    box-shadow:0 12px 40px rgba(70,40,40,.08);
+}
+
+.invitation-card .quote{
+    font-size:28px;
+    color:#a87868;
+    margin-bottom:20px;
+}
+
+.invitation-card p{
     font-size:18px;
 }
 
-/* DETAILS */
+/* =========================
+   BRIDE & GROOM
+========================= */
+
+.couple{
+    background:#f5ebe6;
+}
+
+.couple-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.person{
+    background:white;
+    padding:30px;
+    text-align:center;
+    border-radius:22px;
+    box-shadow:0 8px 25px rgba(70,40,40,.08);
+}
+
+.person-image{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    margin:auto;
+    display:block;
+    border:5px solid #f5ebe6;
+}
+
+.person h3{
+    font-size:28px;
+    margin-top:20px;
+}
+
+.person p{
+    color:#705b5b;
+    margin-top:8px;
+}
+
+/* =========================
+   OUR STORY
+========================= */
+
+.story{
+    text-align:center;
+}
+
+.story-content{
+    max-width:760px;
+    margin:auto;
+}
+
+.story-content p{
+    font-size:18px;
+    color:#604e4e;
+}
+
+/* =========================
+   DETAILS
+========================= */
+
 .details{
     background:#f5ebe6;
 }
 
 .detail-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    grid-template-columns:repeat(2,1fr);
     gap:20px;
 }
 
 .card{
     background:white;
-    padding:30px 20px;
+    padding:35px 20px;
     text-align:center;
-    border-radius:18px;
+    border-radius:20px;
     box-shadow:0 8px 25px rgba(70,40,40,.08);
 }
 
 .icon{
-    font-size:35px;
+    font-size:38px;
     margin-bottom:10px;
 }
 
 .card h3{
-    font-size:21px;
-    margin-bottom:7px;
-    font-weight:400;
+    font-size:22px;
 }
 
 .card p{
     color:#705b5b;
 }
 
-/* COUNTDOWN */
+/* =========================
+   COUNTDOWN
+========================= */
+
 .countdown-section{
     text-align:center;
     background:#3b2929;
@@ -166,133 +321,235 @@ section{
 }
 
 .time-box{
-    min-width:105px;
+    min-width:115px;
     padding:22px 15px;
-    border:1px solid rgba(255,255,255,.35);
-    border-radius:15px;
+    border:1px solid rgba(255,255,255,.3);
+    border-radius:18px;
 }
 
 .time-box strong{
     display:block;
-    font-size:38px;
-    font-weight:400;
+    font-size:40px;
 }
 
 .time-box small{
     text-transform:uppercase;
     letter-spacing:2px;
     font-size:10px;
+    color:#dcb8aa;
 }
 
-/* CONTRIBUTION */
-.contribution{
-    background:#fffaf7;
-}
+/* =========================
+   TIMELINE
+========================= */
 
-.progress-wrap{
+.timeline{
     max-width:750px;
-    margin:0 auto 35px;
-}
-
-.amount{
-    display:flex;
-    justify-content:space-between;
-    gap:10px;
-    flex-wrap:wrap;
-    margin-bottom:12px;
-    font-size:15px;
-}
-
-.progress-bar{
-    height:18px;
-    background:#eadbd5;
-    border-radius:20px;
-    overflow:hidden;
-}
-
-.progress-fill{
-    height:100%;
-    width:30.25%;
-    background:#a87868;
-    border-radius:20px;
-}
-
-.progress-percent{
-    text-align:center;
-    margin-top:12px;
-    font-size:20px;
-}
-
-.contribution-info{
-    max-width:700px;
     margin:auto;
+}
+
+.timeline-item{
+    display:flex;
+    gap:25px;
+    padding:25px 0;
+    border-bottom:1px solid #eadbd5;
+}
+
+.timeline-time{
+    min-width:100px;
+    color:#a87868;
+    font-weight:bold;
+}
+
+.timeline-content h3{
+    font-size:22px;
+}
+
+.timeline-content p{
+    color:#705b5b;
+}
+
+/* =========================
+   LOCATION
+========================= */
+
+.location{
+    background:#f5ebe6;
     text-align:center;
 }
 
-.phone{
-    display:inline-block;
-    margin-top:15px;
-    padding:13px 25px;
-    background:#3b2929;
-    color:white;
-    border-radius:30px;
-    text-decoration:none;
-}
-
-/* CONTRIBUTORS */
-.contributors{
-    background:#f5ebe6;
-}
-
-.list-box{
+.location-card{
     max-width:800px;
     margin:auto;
     background:white;
-    padding:25px;
-    border-radius:18px;
-    box-shadow:0 8px 25px rgba(70,40,40,.07);
+    padding:40px 25px;
+    border-radius:25px;
+    box-shadow:0 10px 35px rgba(70,40,40,.08);
 }
 
-.list-item{
-    display:flex;
-    justify-content:space-between;
-    padding:15px 5px;
-    border-bottom:1px solid #eee;
+.location-icon{
+    font-size:48px;
 }
 
-.list-item:last-child{
-    border-bottom:none;
+.location-card h3{
+    font-size:30px;
+    margin-top:10px;
 }
 
-.empty{
-    text-align:center;
-    color:#8c7777;
-    padding:25px;
+.location-card p{
+    color:#705b5b;
 }
 
-/* PHOTOS */
+.direction-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:14px 30px;
+    background:#3b2929;
+    color:white;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.direction-btn:hover{
+    background:#a87868;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
 .gallery{
     text-align:center;
 }
 
 .photo-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    grid-template-columns:repeat(3,1fr);
     gap:18px;
 }
 
-.photo-placeholder{
-    min-height:260px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:18px;
-    background:#f0e2dc;
-    color:#876f69;
-    font-size:17px;
+.photo{
+    position:relative;
+    overflow:hidden;
+    border-radius:20px;
+    cursor:pointer;
 }
 
-/* CONTACT */
+.photo img{
+    width:100%;
+    height:390px;
+    object-fit:cover;
+    display:block;
+    transition:.5s;
+}
+
+.photo:hover img{
+    transform:scale(1.06);
+}
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.9);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:5000;
+    padding:20px;
+}
+
+.lightbox img{
+    max-width:95%;
+    max-height:90%;
+    border-radius:15px;
+}
+
+.close-lightbox{
+    position:absolute;
+    top:20px;
+    right:30px;
+    color:white;
+    font-size:40px;
+    cursor:pointer;
+}
+
+/* =========================
+   MUSIC
+========================= */
+
+.music-btn{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+    z-index:3000;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    border:none;
+    background:#3b2929;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
+}
+
+/* =========================
+   RSVP
+========================= */
+
+.rsvp{
+    background:#f5ebe6;
+    text-align:center;
+}
+
+.rsvp-card{
+    max-width:700px;
+    margin:auto;
+    background:white;
+    padding:40px 25px;
+    border-radius:25px;
+    box-shadow:0 8px 30px rgba(70,40,40,.08);
+}
+
+.rsvp-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:14px 32px;
+    background:#25D366;
+    color:white;
+    border-radius:30px;
+}
+
+/* =========================
+   GUESTBOOK
+========================= */
+
+.guestbook{
+    text-align:center;
+}
+
+.guestbook-card{
+    max-width:700px;
+    margin:auto;
+}
+
+.guestbook-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:14px 30px;
+    background:#3b2929;
+    color:white;
+    border-radius:30px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
 .contact{
     text-align:center;
     background:#3b2929;
@@ -306,31 +563,73 @@ section{
     border-radius:30px;
     background:#25D366;
     color:white;
-    text-decoration:none;
-    font-family:Arial,sans-serif;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
+
 footer{
     text-align:center;
-    padding:25px 15px;
+    padding:30px 15px;
     background:#241719;
     color:#d8c6c0;
-    font-size:14px;
 }
 
-@media(max-width:600px){
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
     section{
-        padding:55px 16px;
+        padding:60px 16px;
+    }
+
+    .couple-grid,
+    .detail-grid{
+        grid-template-columns:1fr;
+    }
+
+    .photo-grid{
+        grid-template-columns:1fr;
+    }
+
+    .photo img{
+        height:430px;
+    }
+
+    .timeline-item{
+        gap:15px;
+    }
+
+    .timeline-time{
+        min-width:80px;
     }
 
     .hero h1{
-        font-size:50px;
+        font-size:55px;
     }
 
     .time-box{
         min-width:75px;
-        padding:16px 10px;
+        padding:16px 8px;
     }
 
     .time-box strong{
@@ -342,8 +641,53 @@ footer{
 
 <body>
 
-<!-- HERO -->
+
+<!-- =========================
+     OPENING SCREEN
+========================= -->
+
+<div class="opening" id="opening">
+
+    <div class="opening-content">
+
+        <div class="opening-small">
+            Wedding Invitation
+        </div>
+
+        <h1>Irene & Livinus</h1>
+
+        <div class="opening-date">
+            24 • 10 • 2026
+        </div>
+
+        <button class="enter-btn" onclick="enterInvitation()">
+            Enter Invitation 💌
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     MUSIC
+========================= -->
+
+<audio id="weddingMusic" loop>
+    <source src="" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" onclick="toggleMusic()" id="musicButton">
+    🎵
+</button>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
 <header class="hero">
+
     <div class="hero-content">
 
         <div class="small-title">
@@ -356,226 +700,564 @@ footer{
             24 October 2026
         </div>
 
-        <a href="#details" class="hero-btn">
-            View Wedding Details
+        <a href="#invitation" class="hero-btn">
+            Open Invitation
         </a>
 
     </div>
+
 </header>
 
 
-<!-- WELCOME -->
-<section class="welcome">
+<!-- =========================
+     INVITATION MESSAGE
+========================= -->
+
+<section class="invitation" id="invitation">
+
     <div class="container">
 
         <div class="section-title">
-            <span>Our Special Day</span>
-            <h2>We Are Getting Married</h2>
+            <span>You're Invited</span>
+            <h2>A Beautiful Beginning</h2>
         </div>
 
-        <p class="welcome-text">
-            With joy and gratitude, we invite you to celebrate the beautiful
-            journey of love between <strong>Irene Charles & Livinus</strong>.
-            Your presence, prayers and support mean so much to us.
-        </p>
+        <div class="invitation-card">
+
+            <div class="quote">
+                “Two hearts, one journey, one beautiful beginning.”
+            </div>
+
+            <p>
+                With joy and gratitude, we invite you to celebrate
+                the wedding of
+                <strong>Irene Charles & Livinus</strong>.
+            </p>
+
+            <p style="margin-top:20px;">
+                Your presence, love, prayers and support will make
+                this special day even more memorable.
+            </p>
+
+        </div>
 
     </div>
+
 </section>
 
 
-<!-- DETAILS -->
-<section class="details" id="details">
+<!-- =========================
+     BRIDE & GROOM
+========================= -->
+
+<section class="couple">
+
     <div class="container">
 
         <div class="section-title">
+
+            <span>The Couple</span>
+
+            <h2>Irene & Livinus</h2>
+
+        </div>
+
+        <div class="couple-grid">
+
+            <div class="person">
+
+                <img
+                    src="IMG-20260917-WA0065.jpg"
+                    class="person-image"
+                    alt="Irene">
+
+                <h3>Irene Charles</h3>
+
+                <p>
+                    The Bride
+                </p>
+
+            </div>
+
+
+            <div class="person">
+
+                <img
+                    src="IMG-20260917-WA0067.jpg"
+                    class="person-image"
+                    alt="Livinus">
+
+                <h3>Livinus</h3>
+
+                <p>
+                    The Groom
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     OUR STORY
+========================= -->
+
+<section class="story">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Our Journey</span>
+
+            <h2>Our Story</h2>
+
+        </div>
+
+        <div class="story-content">
+
+            <p>
+                Every beautiful journey begins with a moment.
+                Irene & Livinus are celebrating a new chapter
+                filled with love, companionship and shared dreams.
+            </p>
+
+            <p style="margin-top:20px;">
+                On this special day, they invite family and friends
+                to join them as they celebrate their union.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     WEDDING DETAILS
+========================= -->
+
+<section class="details">
+
+    <div class="container">
+
+        <div class="section-title">
+
             <span>Save The Date</span>
+
             <h2>Wedding Details</h2>
+
         </div>
 
         <div class="detail-grid">
 
             <div class="card">
+
                 <div class="icon">📅</div>
+
                 <h3>Date</h3>
-                <p>Saturday, 24 October 2026</p>
+
+                <p>
+                    Saturday, 24 October 2026
+                </p>
+
             </div>
 
+
             <div class="card">
+
                 <div class="icon">📍</div>
-                <h3>Venue</h3>
-                <p>Mbauda The Loft</p>
-                <p>Arusha, Tanzania</p>
-            </div>
 
-            <div class="card">
-                <div class="icon">💰</div>
-                <h3>Contribution Deadline</h3>
-                <p>10 October 2026</p>
+                <h3>Venue</h3>
+
+                <p>
+                    Mbauda The Loft
+                </p>
+
+                <p>
+                    Arusha, Tanzania
+                </p>
+
             </div>
 
         </div>
 
     </div>
+
 </section>
 
 
-<!-- COUNTDOWN -->
+<!-- =========================
+     COUNTDOWN
+========================= -->
+
 <section class="countdown-section">
+
     <div class="container">
 
         <div class="section-title">
-            <span style="color:#dcb8aa;">The Big Day</span>
-            <h2 style="color:white;">Countdown</h2>
+
+            <span style="color:#dcb8aa;">
+                The Big Day
+            </span>
+
+            <h2 style="color:white;">
+                Countdown
+            </h2>
+
         </div>
 
         <div class="countdown">
 
             <div class="time-box">
+
                 <strong id="days">0</strong>
+
                 <small>Days</small>
+
             </div>
 
+
             <div class="time-box">
+
                 <strong id="hours">0</strong>
+
                 <small>Hours</small>
+
             </div>
 
+
             <div class="time-box">
+
                 <strong id="minutes">0</strong>
+
                 <small>Minutes</small>
+
             </div>
 
+
             <div class="time-box">
+
                 <strong id="seconds">0</strong>
+
                 <small>Seconds</small>
+
             </div>
 
         </div>
 
     </div>
+
 </section>
 
 
-<!-- CONTRIBUTIONS -->
-<section class="contribution">
+<!-- =========================
+     TIMELINE
+========================= -->
+
+<section>
+
     <div class="container">
 
         <div class="section-title">
-            <span>Wedding Support</span>
-            <h2>Michango</h2>
-        </div>
 
-        <div class="progress-wrap">
+            <span>The Celebration</span>
 
-            <div class="amount">
-                <strong>Imepatikana: TZS 3,025,000</strong>
-                <span>Lengo: TZS 10,000,000</span>
-            </div>
-
-            <div class="progress-bar">
-                <div class="progress-fill"></div>
-            </div>
-
-            <div class="progress-percent">
-                <strong>30.25%</strong>
-            </div>
+            <h2>Wedding Timeline</h2>
 
         </div>
 
-        <div class="contribution-info">
+        <div class="timeline">
+
+            <div class="timeline-item">
+
+                <div class="timeline-time">
+                    Soon
+                </div>
+
+                <div class="timeline-content">
+
+                    <h3>Wedding Ceremony</h3>
+
+                    <p>
+                        Ceremony details will be updated here.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-time">
+                    Soon
+                </div>
+
+                <div class="timeline-content">
+
+                    <h3>Reception</h3>
+
+                    <p>
+                        Reception details will be updated here.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-time">
+                    Soon
+                </div>
+
+                <div class="timeline-content">
+
+                    <h3>Celebration</h3>
+
+                    <p>
+                        More details coming soon.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LOCATION
+========================= -->
+
+<section class="location">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Find The Venue</span>
+
+            <h2>Where To Find Us</h2>
+
+        </div>
+
+        <div class="location-card">
+
+            <div class="location-icon">
+                📍
+            </div>
+
+            <h3>
+                Mbauda The Loft
+            </h3>
 
             <p>
-                Tunawashukuru wote wanaoendelea kuunga mkono maandalizi
-                ya siku hii muhimu. Michango inafungwa tarehe
-                <strong>10 October 2026.</strong>
+                Arusha, Tanzania
             </p>
 
-            <p style="margin-top:15px;">
-                Kwa ajili ya michango:
-            </p>
+            <a
+                class="direction-btn"
+                href="https://www.google.com/maps/search/?api=1&query=Mbauda+The+Loft+Arusha"
+                target="_blank"
+                rel="noopener">
 
-            <strong>
-                Charles Mwanga — Vodacom
-            </strong>
+                📍 Get Directions
 
-            <br>
-
-            <a class="phone" href="tel:+255753834495">
-                📱 0753 834 495
             </a>
 
         </div>
 
     </div>
+
 </section>
 
 
-<!-- CONTRIBUTORS -->
-<section class="contributors">
-    <div class="container">
+<!-- =========================
+     GALLERY
+========================= -->
 
-        <div class="section-title">
-            <span>Thank You</span>
-            <h2>Orodha ya Wachangiaji</h2>
-        </div>
-
-        <div class="list-box">
-
-            <!-- Majina ya wachangiaji yataongezwa hapa -->
-
-            <div class="empty">
-                Orodha ya wachangiaji itaonekana hapa.
-                ❤️<br><br>
-                Asante kwa kila mchango unaotolewa.
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-
-<!-- PHOTOS -->
 <section class="gallery">
+
     <div class="container">
 
         <div class="section-title">
+
             <span>Our Memories</span>
+
             <h2>Gallery</h2>
+
         </div>
 
         <div class="photo-grid">
 
-            <div class="photo-placeholder">
-                📸 Photo 1
+            <div class="photo"
+                 onclick="openLightbox('IMG-20260917-WA0064.jpg')">
+
+                <img
+                    src="IMG-20260917-WA0064.jpg"
+                    alt="Irene & Livinus">
+
             </div>
 
-            <div class="photo-placeholder">
-                📸 Photo 2
+
+            <div class="photo"
+                 onclick="openLightbox('IMG-20260917-WA0065.jpg')">
+
+                <img
+                    src="IMG-20260917-WA0065.jpg"
+                    alt="Irene & Livinus">
+
             </div>
 
-            <div class="photo-placeholder">
-                📸 Photo 3
+
+            <div class="photo"
+                 onclick="openLightbox('IMG-20260917-WA0067.jpg')">
+
+                <img
+                    src="IMG-20260917-WA0067.jpg"
+                    alt="Irene & Livinus">
+
             </div>
 
         </div>
 
-        <p style="margin-top:25px;color:#806d68;">
-            Picha za Irene & Livinus zitaongezwa hapa.
-        </p>
-
     </div>
+
 </section>
 
 
-<!-- CONTACT -->
+<!-- =========================
+     LIGHTBOX
+========================= -->
+
+<div class="lightbox" id="lightbox">
+
+    <div
+        class="close-lightbox"
+        onclick="closeLightbox()">
+
+        ×
+
+    </div>
+
+    <img
+        id="lightboxImage"
+        src=""
+        alt="Wedding Photo">
+
+</div>
+
+
+<!-- =========================
+     RSVP
+========================= -->
+
+<section class="rsvp">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>We Would Love To See You</span>
+
+            <h2>RSVP</h2>
+
+        </div>
+
+        <div class="rsvp-card">
+
+            <p>
+                Please confirm your attendance with the wedding
+                committee through WhatsApp.
+            </p>
+
+            <a
+                class="rsvp-btn"
+                href="https://wa.me/255716447413?text=Hello%20Irene%20%26%20Livinus%20wedding%20committee%2C%20I%20would%20like%20to%20confirm%20my%20attendance."
+                target="_blank"
+                rel="noopener">
+
+                💌 Confirm Attendance
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     GUESTBOOK
+========================= -->
+
+<section class="guestbook">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Leave Your Love</span>
+
+            <h2>Guestbook</h2>
+
+        </div>
+
+        <div class="guestbook-card">
+
+            <p>
+                Leave a special message, blessing or congratulation
+                for Irene & Livinus.
+            </p>
+
+            <a
+                class="guestbook-btn"
+                href="https://wa.me/255716447413?text=Congratulations%20Irene%20%26%20Livinus!%20My%20message%20for%20you%20is%3A"
+                target="_blank"
+                rel="noopener">
+
+                ❤️ Leave A Message
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
 <section class="contact">
 
     <div class="container">
 
         <div class="section-title">
-            <span style="color:#dcb8aa;">Need More Information?</span>
-            <h2 style="color:white;">Wasiliana na Kamati</h2>
+
+            <span style="color:#dcb8aa;">
+                Need More Information?
+            </span>
+
+            <h2 style="color:white;">
+                Wasiliana na Kamati
+            </h2>
+
         </div>
 
         <p>
@@ -585,8 +1267,11 @@ footer{
         <a
             class="whatsapp"
             href="https://wa.me/255716447413"
-            target="_blank">
+            target="_blank"
+            rel="noopener">
+
             💬 WhatsApp ya Kamati
+
         </a>
 
         <p style="margin-top:15px;">
@@ -598,60 +1283,176 @@ footer{
 </section>
 
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
+
     ❤️ Irene Charles & Livinus ❤️
+
     <br>
+
     24 October 2026 · Mbauda The Loft, Arusha
+
 </footer>
 
 
 <script>
 
-const weddingDate = new Date("October 24, 2026 00:00:00").getTime();
+/* =========================
+   OPEN INVITATION
+========================= */
 
-const countdown = setInterval(function(){
+function enterInvitation(){
 
-    const now = new Date().getTime();
+    document
+        .getElementById("opening")
+        .classList.add("hide");
 
-    const distance = weddingDate - now;
+}
 
-    if(distance <= 0){
 
-        clearInterval(countdown);
+/* =========================
+   COUNTDOWN
+========================= */
 
-        document.getElementById("days").innerHTML = "0";
-        document.getElementById("hours").innerHTML = "0";
-        document.getElementById("minutes").innerHTML = "0";
-        document.getElementById("seconds").innerHTML = "0";
+const weddingDate =
+    new Date("October 24, 2026 00:00:00").getTime();
 
-        return;
+const countdown =
+    setInterval(function(){
+
+        const now =
+            new Date().getTime();
+
+        const distance =
+            weddingDate - now;
+
+        if(distance <= 0){
+
+            clearInterval(countdown);
+
+            document.getElementById("days").innerHTML = "0";
+            document.getElementById("hours").innerHTML = "0";
+            document.getElementById("minutes").innerHTML = "0";
+            document.getElementById("seconds").innerHTML = "0";
+
+            return;
+        }
+
+        const days =
+            Math.floor(
+                distance /
+                (1000 * 60 * 60 * 24)
+            );
+
+        const hours =
+            Math.floor(
+                (distance %
+                (1000 * 60 * 60 * 24))
+                /
+                (1000 * 60 * 60)
+            );
+
+        const minutes =
+            Math.floor(
+                (distance %
+                (1000 * 60 * 60))
+                /
+                (1000 * 60)
+            );
+
+        const seconds =
+            Math.floor(
+                (distance %
+                (1000 * 60))
+                /
+                1000
+            );
+
+        document.getElementById("days").innerHTML =
+            days;
+
+        document.getElementById("hours").innerHTML =
+            hours;
+
+        document.getElementById("minutes").innerHTML =
+            minutes;
+
+        document.getElementById("seconds").innerHTML =
+            seconds;
+
+    },1000);
+
+
+/* =========================
+   GALLERY LIGHTBOX
+========================= */
+
+function openLightbox(image){
+
+    document.getElementById("lightboxImage").src =
+        image;
+
+    document.getElementById("lightbox").style.display =
+        "flex";
+
+}
+
+function closeLightbox(){
+
+    document.getElementById("lightbox").style.display =
+        "none";
+
+}
+
+
+/* =========================
+   MUSIC BUTTON
+========================= */
+
+let musicPlaying = false;
+
+function toggleMusic(){
+
+    const music =
+        document.getElementById("weddingMusic");
+
+    const button =
+        document.getElementById("musicButton");
+
+    if(!musicPlaying){
+
+        if(music.querySelector("source").src === ""){
+
+            alert(
+                "Wedding music will be added here. 🎵"
+            );
+
+            return;
+
+        }
+
+        music.play();
+
+        musicPlaying = true;
+
+        button.innerHTML = "⏸️";
+
+    }else{
+
+        music.pause();
+
+        musicPlaying = false;
+
+        button.innerHTML = "🎵";
+
     }
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-
-    const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24))
-        / (1000 * 60 * 60)
-    );
-
-    const minutes = Math.floor(
-        (distance % (1000 * 60 * 60))
-        / (1000 * 60)
-    );
-
-    const seconds = Math.floor(
-        (distance % (1000 * 60))
-        / 1000
-    );
-
-    document.getElementById("days").innerHTML = days;
-    document.getElementById("hours").innerHTML = hours;
-    document.getElementById("minutes").innerHTML = minutes;
-    document.getElementById("seconds").innerHTML = seconds;
-
-},1000);
+}
 
 </script>
 
 </body>
-</html>
+    </html>
